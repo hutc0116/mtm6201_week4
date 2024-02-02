@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+    content="width=device-width, initial-scale=1.0">
+    <link href="css/main.css" 
+    rel="stylesheet">
+    <title>Image Optimization</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Responsive Images</h1>
+        <section>
+            <h2>Same Image, Different Sizes</h2>
+            <img src="https://placehold.co/600x600" 
+            alt="A placeholder image"
+            srcset="https://placehold.co/200x200 200w, 
+            https://placehold.co/400x400 400w, 
+            https://placehold.co/600x600 600w" 
+            sizes="(max-width:200px) 200px, 
+            (max-width:400px) 400px, 
+            (max-width:600px) 600px">
+        </section>
+        <section>
+            <h2>Same Image, Different Resolution</h2>
+            <img class="profile" 
+            src="https://placehold.co/200x200" 
+            alt="A placeholder image" 
+            srcset="https://placehold.co/200x200 1x, 
+            https://placehold.co/400x400 2x, 
+            https://placehold.co/600x600 3x">
+        </section>
+        <section>
+            <h2>Art Direction Problems</h2>
+            <picture>
+                <source srcset="/images/fall-dog-1200.jpg"
+                media="(min-width:1200px)">
+                <source srcset="/images/fall-dog-900.jpg"
+                media="(min-width:900px)">
+                <source srcset="/images/fall-dog-640.jpg"
+                media="(min-width:640px)">
+                <img src="/images/fall-dog-640.jpg" 
+                alt="A photograph of a dog lying on a dog bed">
+            </picture>
+        </section>
+    </div>
+</body>
+</html>
